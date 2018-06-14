@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: NIT essay.aux
+A level-1 auxiliary file: tex/cover.aux
+A level-1 auxiliary file: tex/title.aux
+A level-1 auxiliary file: tex/chinese-abstract.aux
+A level-1 auxiliary file: tex/english-abstract.aux
+A level-1 auxiliary file: tex/section1.aux
+A level-1 auxiliary file: tex/section2.aux
+A level-1 auxiliary file: tex/section3.aux
+A level-1 auxiliary file: tex/reference.aux
+The style file: plainnat.bst
+Database file #1: bib/mybib.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            619 strings with 5471 characters,
+and the built_in function-call counts, 1357 in all, are:
+= -- 108
+> -- 99
+< -- 2
++ -- 33
+- -- 30
+* -- 107
+:= -- 213
+add.period$ -- 7
+call.type$ -- 3
+change.case$ -- 19
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 51
+empty$ -- 104
+format.name$ -- 37
+if$ -- 278
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 21
+num.names$ -- 12
+pop$ -- 44
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 53
+stack$ -- 0
+substring$ -- 21
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 0
+while$ -- 10
+width$ -- 0
+write$ -- 40

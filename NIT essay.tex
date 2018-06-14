@@ -1,0 +1,133 @@
+%----------------南昌工程学院毕业论文LaTeX模板------------------------
+%----------------AUTHOR  :  GUANGCHUN-------------------------
+
+\documentclass[UTF8,twoside]{ctexart} % use larger type; default would be 10pt
+\usepackage{graphicx}
+\usepackage {setspace}%设置正文行间距为1.5倍
+\usepackage[a4paper,top=25mm, bottom=20mm, left=25mm, right=20mm]{geometry}%设置页边距
+\usepackage{graphicx}%插入图片
+\usepackage{booktabs} %美观的表格
+\usepackage{amsmath}%数学模式
+\usepackage{fancyhdr} %页面布局
+\usepackage{titletoc}  %与标题目录有关
+\usepackage[square]{natbib}%文献系统
+\usepackage[bookmarks=true,colorlinks,linkcolor=black]{hyperref} %这是可选可不选的宏包，方便PDF软件的阅读
+%\usepackage{appendix}%附录部分,有的话取消注释
+
+%--------------------------------
+%目录样式
+%目录页设置
+\renewcommand{\contentsname}{\zihao{2}\songti 目\quad 录}
+\titlecontents{section}[0em]{\heiti\zihao{4} }{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+\titlecontents{subsection}[2em]{\vspace{0.1\baselineskip}\zihao{-4}}{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+\titlecontents{subsubsection}[4em]{\vspace{0.1\baselineskip}\zihao{-4}}{\thecontentslabel\ }{}
+{\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+%--------------------------
+
+%--------------------------
+%三级标题格式
+%\usepackage{sub4section}
+%\secnumdepth{4}
+\ctexset {
+	section = {
+name = {第,章},
+number = \chinese{section},
+nameformat = \songti \bfseries\zihao{3},
+titleformat = \centering\songti \bfseries\zihao{3},
+}
+}
+\ctexset{
+	subsection = {
+%format = \raggedright ,
+%nameformat = \bfseries\zihao{4},
+format = \heiti\bfseries\zihao{4},
+}
+}
+\ctexset{
+	subsubsection = {
+format = \raggedright ,
+nameformat = \bfseries\zihao{-4},
+titleformat =\songti \bfseries\zihao{-4},
+}
+}
+\setcounter{secnumdepth}{5}
+\ctexset{
+	paragraph = {	
+	name = {,.},
+        number=\arabic{paragraph}, 
+        format=\indent{}\songti\zihao{-4}
+}
+}
+\ctexset{
+	subparagraph = {
+	name = {(,)},
+	number = \arabic{subparagraph},
+	 format=\songti\zihao{-4}
+
+}
+}
+
+%---------------标注样式-----------	
+\newcommand{\upcitep}[1]{\textsuperscript{\textsuperscript{\citep{#1}}}}  
+\setcitestyle{numbers}
+%---------------------------
+%代码背景样式
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+	numbers=left,  
+	frame=tb,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	framerule=1pt,
+	rulecolor=\color{gray!35},
+	backgroundcolor=\color{gray!5},
+	basicstyle={\ttfamily},
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+}
+
+%-------------------其他设置-----------------------------
+\renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}  %设置图片标题样式
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}  %设置表格标题样式
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}} %设置公式右边注释样式
+
+%-----页眉页脚设置--------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO]{\songti \zihao{-5}南昌工程学院本（专）科毕业设计（论文） }  %奇数页页眉设置
+\fancyhead[CE]{\songti \zihao{-5}\rightmark}   %偶数页页眉设置
+\renewcommand\sectionmark [1]{\markboth  {}{第 \thesection 章 ： #1}}
+\cfoot{\thepage}
+
+%--------论文主体--------
+\begin{document}
+\include{tex/cover}
+\include{tex/title}
+\pagenumbering{Roman} %页码采用罗马数字
+\include{tex/chinese-abstract}
+\include{tex/english-abstract}
+
+%\setcounter {tocdepth}{3}
+%--------开始用阿拉伯数字编码-----
+\pagenumbering{arabic}
+%--------目录---------------
+\tableofcontents\thispagestyle{plain}
+\include{tex/section1}
+\include{tex/section2}
+\include{tex/section3}
+\include{tex/reference}
+%-----------------------------------------
+\end{document}
